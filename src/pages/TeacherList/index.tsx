@@ -49,12 +49,26 @@ function TeacherList() {
     }
 
     async function handleFiltersSubmit() {
+
+        /*Correção temporária para dia da semana*/
+        let week_day_value_submit = parseInt(week_day.trim());
+
+        if (["0","1","2","3","4","5","6"].indexOf(week_day.trim())  == -1) {
+        
+            const arr_week_day = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+    
+            const week_day_value = week_day.trim().toLowerCase().replace("-feira", "");
+    
+            week_day_value_submit = arr_week_day.indexOf(week_day_value);
+        }
+        /*Fim correção*/
+        
         loadFavorites();
 
         const response = await api.get('classes', {
             params: {
                 subject,
-                week_day,
+                week_day: week_day_value_submit,
                 time,
             }
         });

@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
 
     avatar: {
         width: 64,
-        height; 664,
+        height: 64,
         borderRadius: 32,
         backgroundColor: '#eee'
     },
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
    },
 
     bio: {
-        marginHorinzontal: 24,
+        marginHorizontal: 24,
         fontFamily: 'Poppins_400Regular',
         color: '#6a6180',
         fontSize: 14,
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     },
 
     favorited: {
-        backgroundColor:'#33e3d',
+        backgroundColor:'#e33d3d',
     }, 
 
     contactButton: {

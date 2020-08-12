@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     },
 
     titleBold : {
-        fontWeight: 'Poppins_600SemiBold',
+        fontFamily: 'Poppins_600SemiBold',
     },
 
     buttonsContainer: {

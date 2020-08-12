@@ -1,5 +1,5 @@
-import React, {reactNode} from 'react';
-import { View, ImageBackground, Image, Text,  } from 'react-native';
+import React, {ReactNode} from 'react';
+import { View, Image, Text,  } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native'; 
 import { BorderlessButton } from 'react-native-gesture-handler'
@@ -11,7 +11,7 @@ import styles from './styles';
 
 interface PageHeaderProps {
     title: string;
-    headerRight: ReactNode;
+    headerRight?: ReactNode;
 }
 
 const PageHeader: React.FC<PageHeaderProps> = ( {title, headerRight, children} ) =>  {

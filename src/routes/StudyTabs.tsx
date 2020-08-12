@@ -1,5 +1,4 @@
 import React from 'react';
-import { View, ImageBackground, Image, Text } from 'react-native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -47,7 +46,7 @@ function StudyTabs( ) {
             component={TeacherList}
             options={{
                 tabBarLabel: 'Proffys',
-                tabBarIcon: ( {color, size}) => {
+                tabBarIcon: ( {color, size, focused}) => {
                     return (
                     <Ionicons name="ios-easel" size={size} color={focused ? '#8257E5' : color} />
                     );

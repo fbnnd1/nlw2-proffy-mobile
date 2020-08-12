@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, ImageBackground, Image, Text, ScrollView, TextInput } from 'react-native';
+import { View,  Text, ScrollView, TextInput } from 'react-native';
 import { BorderlessButton, RectButton } from 'react-native-gesture-handler';
 import { Feather} from '@expo/vector-icons';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -30,7 +30,7 @@ function TeacherList() {
                     const favoritedTeachersIds = favoritedTeachers.map(
                         (teacher:Teacher) => { return teacher.id; }
                     );
-                    setFavorites(favoritedTeachers);
+                    setFavorites(favoritedTeachersIds);
                 }
             }
         )
@@ -93,7 +93,7 @@ function TeacherList() {
                     </View>
 
                     <RectButton style={styles.submitButton} onPress={handleFiltersSubmit}>
-                        <Text style={styles.submitButtonText}>Filtar</Text>
+                        <Text style={styles.submitButtonText}>Pesquisar</Text>
 
                     </RectButton>
                 </View>
@@ -112,13 +112,11 @@ function TeacherList() {
             >
                 {teachers.map((teacher:Teacher) => 
                 {
-                    return (<TeacherItem key={teacher.id} teacher={teacher} favorited={favorited.includes(teacher.id)} />);
+                    return (<TeacherItem key={teacher.id} teacher={teacher} favorited={favorites.includes(teacher.id)} />);
                 }
 
                 )}
 
-                <TeacherItem />
-                <TeacherItem />
             </ScrollView>
 
         </View>

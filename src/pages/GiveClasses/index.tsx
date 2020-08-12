@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ImageBackground, Image, Text } from 'react-native';
+import { View, ImageBackground, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
 
@@ -7,7 +7,7 @@ import styles from './styles';
 
 import giveClassesBgImage from '../../assets/images/give-classes-background.png'
 
-function Landing() {
+function GiveClasses() {
 
     const { goBack } = useNavigation();
 
@@ -24,7 +24,7 @@ function Landing() {
             >
                 <Text style={styles.title}>Quer ser um Proffy?</Text>
                 <Text style={styles.description}>
-                    Para comneçar, você precisa se cadastrar como professor na nossa plataforma web.
+                    Para começar, você precisa se cadastrar como professor na nossa plataforma web.
                 </Text>
             </ImageBackground>
 

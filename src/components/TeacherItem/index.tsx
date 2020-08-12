@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, ImageBackground, Image, Text, Linking, AsyncStorage } from 'react-native';
+import { View, ImageBackground, Image, Text, Linking } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 
 import { useNavigation } from '@react-navigation/native'; 
@@ -7,7 +7,7 @@ import { RectButton } from 'react-native-gesture-handler';
 
 
 import heartOutlineIcon from '../../assets/images/icons/heart-outline.png';
-import unfavoriteIcon from '../../assets/images/icons/heart-outline.png';
+import unfavoriteIcon from '../../assets/images/icons/unfavorite.png';
 import whatsappIcon from '../../assets/images/icons/whatsapp.png';
 
 import logoImg from '../../assets/images/logo.png';
@@ -67,9 +67,9 @@ function TeacherItem() {
 
             setIsFavorited(true);
 
-            await AsyncStorage.setItem('favorites', JSON.stringify(favoritesArray))
-
         }
+
+        await AsyncStorage.setItem('favorites', JSON.stringify(favoritesArray))
     }
 
     const { navigate } = useNavigation();

@@ -10,6 +10,8 @@ import styles from './styles';
 
 function Favorites() {
 
+    const [favorites, setFavorites] = useState([]);
+
     function loadFavorites() {
         AsyncStorage.getItem('favorites').then(
             response => {
@@ -20,8 +22,6 @@ function Favorites() {
             }
         )
     }
-
-    const [favorites, setFavorites] = useState([]);
 
     /* Erro -> Loop infinito
     useFocusEffect(() => {
@@ -37,7 +37,7 @@ function Favorites() {
 
     return (
         <View style={styles.container}>
-            <PageHeader title="Meus Proffys disponíveis"/>
+            <PageHeader title="Meus Proffys favoritos"/>
 
             <ScrollView 
                 style={styles.teacherList}
@@ -49,7 +49,7 @@ function Favorites() {
                 }    
             >
 
-                {teachers.map((teacher:Teacher) => 
+                {favorites.map((teacher:Teacher) => 
                 {
                     return (<TeacherItem key={teacher.id} teacher={teacher} favorited={true} />);
                 }

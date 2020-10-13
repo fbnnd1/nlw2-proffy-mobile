@@ -15,7 +15,7 @@ As aulas são divididas em sub-conjuntos denominados "trilhas". A trilha desse p
 
 Plataforma onde estudantes podem encontrar professores para obterem aulas particulares. A plataforma irá atuar como uma ponte entre professores e estudantes.
 
-![Imagem que resume a ideia do sistema](doc-img/ideia-proffy.png)
+![Imagem que resume a ideia do sistema](doc-img/proffy-ideia-sistema.png)
 
 ### Stakeholders
 
